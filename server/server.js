@@ -40,6 +40,15 @@ app.put('/usuario/:idEntrada', (req, res) => {
     });
 });
 
+app.delete('/usuario/:idEntrada', (req, res) => {
+    let id = req.params.idEntrada;
+    let body = req.body;
+
+    res.json({
+        id
+    });
+});
+
 app.listen(process.env.PORT, () => {
     console.log(`Escuhando puerto: ${process.env.PORT}`);
 })
